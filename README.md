@@ -6,7 +6,7 @@ This repository contains a statistical exploratory data analysis (EDA) pipeline 
 ## Statistical Methodologies Applied
 * **Stationarity Testing:** Applied Augmented Dickey-Fuller (ADF) tests to identify mean-reverting vs. persistent regimes. Short-lookback features heavily rejected the unit root hypothesis ($p < 0.001$), while longer horizons exhibited increasing persistence.
 * **Feature Orthogonality:** Computed Pearson correlation matrices to identify severe multi-horizon collinearity ($r > 0.85$), proving the necessity of PCA or hierarchical clustering prior to alpha weighting.
-* **Target Labeling & Leptokurtosis:** Modeled 5-observation forward log returns ($r_{t, t+5} = \ln(P_{t+5} / P_t)$). The empirical distribution exhibited an excess kurtosis of $+2.30$, confirming fat-tailed market microstructure that standard Gaussian models would underestimate.
+* **Target Labeling & Leptokurtosis:** Modeled 5-observation forward log returns (r(t, t+5) = ln(P(t+5) / P(t))). The empirical distribution exhibited an excess kurtosis of $+2.30$, confirming fat-tailed market microstructure that standard Gaussian models would underestimate.
 
 ## Technologies Used
 * `pandas` & `numpy` for vectorized time-series manipulation
